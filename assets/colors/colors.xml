@@ -26,4 +26,7 @@
     <!-- Optional: Add some intermediate colors for smoother gradients -->
     <color name="loginGradientMid1">#6B52FF</color>
     <color name="loginGradientMid2">#6E9AD6</color>
+
+    <!--    Login color  -->
+    <color name="loginBackground">#141522</color>
 </resources>

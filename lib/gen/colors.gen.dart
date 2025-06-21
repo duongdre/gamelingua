@@ -34,6 +34,21 @@ class ColorName {
   /// Color: #374151
   static const Color iconGray = Color(0xFF374151);
 
+  /// Color: #141522
+  static const Color loginBackground = Color(0xFF141522);
+
+  /// Color: #6EE7B7
+  static const Color loginGradientEnd = Color(0xFF6EE7B7);
+
+  /// Color: #6B52FF
+  static const Color loginGradientMid1 = Color(0xFF6B52FF);
+
+  /// Color: #6E9AD6
+  static const Color loginGradientMid2 = Color(0xFF6E9AD6);
+
+  /// Color: #6840FF
+  static const Color loginGradientStart = Color(0xFF6840FF);
+
   /// Color: #DAD2FF
   static const Color purpleBackground = Color(0xFFDAD2FF);
 

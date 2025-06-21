@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-
-
+import 'package:gamelingua/gen/assets.gen.dart';
+import 'package:gamelingua/gen/colors.gen.dart';
+import 'package:gamelingua/utilities/utils/color_gradient.dart';
 import '../../../services/firebase_services/auth_service.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -17,20 +17,38 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    _emailController.text = "duongdre@gmail.com";
-    _passwordController.text = "okmbhu123";
     return Scaffold(
-      body: Center(
+      body: Container(
+        width: MediaQuery.sizeOf(context).width,
+        color: ColorName.loginBackground,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            Container(
+              height: 69.5,
+              width: 68,
+              padding: EdgeInsets.only(left: 16, right: 16, top: 24, bottom: 24),
+              decoration: BoxDecoration(
+                gradient: ColorNameGradients.loginGradient,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: Assets.images.gamelinguaLogo.provider(),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Container(
               width: MediaQuery.of(context).size.width / 2,
               child: TextField(
                 controller: _emailController,
-                decoration: const InputDecoration(hintText: 'Email'),
+                decoration: const InputDecoration(hintText: 'you@email.com'),
               ),
             ),
             const SizedBox(
