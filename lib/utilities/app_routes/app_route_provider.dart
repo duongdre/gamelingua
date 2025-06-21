@@ -13,7 +13,10 @@ final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>(d
 
 @riverpod
 Uri currentRoute(ref) {
-  return ref.watch(routeInformationProvider).imgValue.uri;
+  return ref
+      .watch(routeInformationProvider)
+      .imgValue
+      .uri;
 }
 
 final routeInformationProvider = ChangeNotifierProvider<GoRouteInformationProvider>((ref) {
@@ -22,24 +25,24 @@ final routeInformationProvider = ChangeNotifierProvider<GoRouteInformationProvid
 });
 
 final routerProvider = Provider<GoRouter>(
-      (ref) => GoRouter(
-    observers: [AppRouteObserver(ref)],
-    navigatorKey: _rootNavigatorKey,
-    initialLocation: LoginScreen.routePath,
-    routes: [
-      GoRoute(
-        path: SplashScreen.routePath,
-        name: SplashScreen.routeName,
-        builder: (context, state) => const SplashScreen(),
-      ),
-      GoRoute(
-        path: LoginScreen.routePath,
-        name: LoginScreen.routeName,
-        builder: (context, state) => const LoginScreen(),
+      (ref) =>
+      GoRouter(
+        observers: [AppRouteObserver(ref)],
+        navigatorKey: _rootNavigatorKey,
+        initialLocation: LoginScreen.routePath,
         routes: [
-
+          GoRoute(
+            path: SplashScreen.routePath,
+            name: SplashScreen.routeName,
+            builder: (context, state) => const SplashScreen(),
+          ),
+          GoRoute(
+            path: LoginScreen.routePath,
+            name: LoginScreen.routeName,
+            builder: (context, state) => const LoginScreen(),
+            routes: [
+            ],
+          ),
         ],
       ),
-    ],
-  ),
 );

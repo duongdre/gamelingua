@@ -18,4 +18,15 @@
     <color name="borderBlack">#D1D5DB</color>
 
     <color name="iconGray">#374151</color>
+
+    <!-- New gradient colors for your login button -->
+    <color name="loginGradientStart">#6840FF</color>
+    <color name="loginGradientEnd">#6EE7B7</color>
+
+    <!-- Optional: Add some intermediate colors for smoother gradients -->
+    <color name="loginGradientMid1">#6B52FF</color>
+    <color name="loginGradientMid2">#6E9AD6</color>
+
+    <!--    Login color  -->
+    <color name="loginBackground">#141522</color>
 </resources>
