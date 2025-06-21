@@ -15,7 +15,6 @@ class SplashScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     Timer(const Duration(seconds: 1), () {
       context.goNamed(LoginScreen.routeName);
     });
