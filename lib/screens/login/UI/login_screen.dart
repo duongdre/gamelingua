@@ -20,8 +20,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    _emailController.text = "duongdre@gmail.com";
-    _passwordController.text = "123456a@";
     return Scaffold(
       body: Container(
         width: MediaQuery.sizeOf(context).width,
